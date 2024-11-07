@@ -7,13 +7,22 @@ export const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer>
-      <Stack p={{xs: 2, md: 3}} justifyContent='center' alignItems='center' direction='row' gap={2}>
-        <Stack component={Link} href={ROUTES.HOME}>
-          <CadExchangeIcon />
+    <Stack position='sticky' bottom={0} left={0} width={1}>
+      <footer>
+        <Stack
+          p={{xs: 2, md: 3}}
+          justifyContent='center'
+          alignItems='center'
+          direction='row'
+          gap={2}
+          bgcolor={'white'}
+        >
+          <Stack component={Link} href={ROUTES.HOME}>
+            <CadExchangeIcon />
+          </Stack>
+          <Typography variant='body2'>{currentYear}</Typography>
         </Stack>
-        <Typography variant='body2'>{currentYear}</Typography>
-      </Stack>
-    </footer>
+      </footer>
+    </Stack>
   );
 };
