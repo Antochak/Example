@@ -15,7 +15,7 @@ interface FormData {
 }
 
 export default function ContactPage() {
-  const [submittedName, setSubmittedName] = useState('');
+  const [successMessage, setSuccessMessage] = useState('');
 
   const {
     register,
@@ -32,16 +32,16 @@ export default function ContactPage() {
       const response = await submitContactForm(data);
       console.log(response);
 
-      setSubmittedName(response.name);
+      setSuccessMessage(response.message);
     } catch (error) {
       alert('There was an error submitting your form. Please try again later.');
     }
   };
 
-  if (submittedName) {
+  if (successMessage) {
     return (
       <Stack alignItems='center' m={'auto'} gap={4}>
-        <Typography variant='h5'>Thank you for your interest, {submittedName}!</Typography>
+        <Typography variant='h5'>{successMessage}</Typography>
         <Button LinkComponent={Link} href={ROUTES.HOME} variant='contained'>
           home
         </Button>
