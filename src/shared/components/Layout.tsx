@@ -3,9 +3,9 @@ import {Footer, Header} from '~/widgets';
 
 export const Layout = ({children}: {children: React.ReactNode}) => {
   return (
-    <Stack height={1}>
+    <Stack minHeight={1}>
       <Header />
-      {children}
+      <Stack flex={'1 0 auto'}>{children}</Stack>
       <Footer />
     </Stack>
   );

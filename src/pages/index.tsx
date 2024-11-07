@@ -1,8 +1,17 @@
 import {Stack} from '@mui/material';
+import {AnotherBlock, ContentBlock, IntroductionBlock} from '~/features';
 import {Layout} from '~/shared';
 
 HomePage.Layout = Layout;
 
 export default function HomePage() {
-  return <Stack flex={'1 0 auto'}>home page</Stack>;
+  return (
+    <main>
+      <Stack gap={{xs: 1, md: 5}} maxWidth={'xl'} m='auto'>
+        <IntroductionBlock />
+        <ContentBlock />
+        <AnotherBlock />
+      </Stack>
+    </main>
+  );
 }
