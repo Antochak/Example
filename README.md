@@ -40,11 +40,15 @@ Styling, SEO, and Performance Strategies
 
 Styling
 CSS-in-JS: MUI's styled API was used for component styling, enabling dynamic theming and modular CSS.
+
 Responsive Layout: The mobile layout was manually optimized to maintain usability.
-Custom Form Styling: Each form field includes customized styles, including hover and focus states for enhanced user experience.
+
 SEO Optimization
-Meta Tags: The project includes SEO meta tags for Core Web Vitals and social media preview tags (Open Graph, Twitter cards).
+Meta Tags:
+The project includes SEO meta tags for Core Web Vitals and social media preview tags (Open Graph, Twitter cards).
 Heading Hierarchy: A logical heading structure was followed for accessibility and SEO.
+
+
 Performance Optimization
 Lazy Loading for YouTube Video: The embedded YouTube video uses lazy loading to improve Largest Contentful Paint (LCP).
 Static Generation (SSG): Implemented static generation for the main and contact pages for faster loading.
