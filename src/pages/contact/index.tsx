@@ -1,4 +1,4 @@
-import {Box, Button, Stack, styled, TextField, Typography} from '@mui/material';
+import {Box, Button, Stack, TextField, Typography} from '@mui/material';
 import Head from 'next/head';
 import Link from 'next/link';
 import {useState} from 'react';
@@ -80,7 +80,7 @@ export default function ContactPage() {
               Name
             </Typography>
             <TextField
-              {...register('name', {required: 'Name is required'})}
+              {...register('name', validationRules.name)}
               fullWidth
               label='Name'
               id='name'
@@ -92,13 +92,7 @@ export default function ContactPage() {
               Email
             </Typography>
             <TextField
-              {...register('email', {
-                required: 'Email is required',
-                pattern: {
-                  value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
-                  message: 'Invalid email address',
-                },
-              })}
+              {...register('email', validationRules.email)}
               fullWidth
               label='Email'
               id='email'
@@ -110,7 +104,7 @@ export default function ContactPage() {
               Message
             </Typography>
             <TextField
-              {...register('message', {required: 'Message is required'})}
+              {...register('message', validationRules.message)}
               fullWidth
               label='Message'
               id='message'
@@ -130,20 +124,6 @@ export default function ContactPage() {
   );
 }
 
-const CustomTextField = styled(TextField)({
-  '& .MuiInputBase-root': {
-    backgroundColor: '#fff',
-    borderRadius: 4,
-    border: '1px solid #ccc',
-  },
-  '& .MuiInputBase-root.Mui-focused': {
-    borderColor: '#3f51b5',
-  },
-  '& .MuiInputBase-input': {
-    padding: '10px 12px',
-  },
-});
-
 const submitContactForm = async (formData: {name: string; email: string; message: string}) => {
   try {
     const response = await fetch('/api/contact', {
@@ -162,4 +142,16 @@ const submitContactForm = async (formData: {name: string; email: string; message
     console.error('Error submitting form:', error);
     throw error;
   }
+};
+
+const validationRules = {
+  name: {required: 'Name is required'},
+  email: {
+    required: 'Email is required',
+    pattern: {
+      value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+      message: 'Invalid email address',
+    },
+  },
+  message: {required: 'Message is required'},
 };
