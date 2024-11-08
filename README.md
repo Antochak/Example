@@ -1,40 +1,60 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+Frontend Test Task - Simple Two-Page Website
 
-## Getting Started
+This project is a simple two-page website created as part of a frontend developer test task. It includes a main page and a contact page with a form, and a basic backend for handling form submissions.
 
-First, run the development server:
+Live Site
+[https://splendid-marzipan-c7eaf4.netlify.app]
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Project Overview
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Main Functionality
+Responsive Design: Both pages are fully responsive, adapting seamlessly to mobile and desktop screens.
+Sticky Header & Footer: Each page includes a sticky header and footer for consistent navigation.
+Embedded YouTube Video: The main page has an embedded YouTube video with lazy loading for optimized performance.
+Contact Form with Backend Integration: The contact form on the contact page submits data to a backend that logs input to the console and returns a personalized confirmation message.
+Technical Stack
+Framework: Next.js
+Component Library: MUI 5
+Form Management: React Hook Form
+Styling: CSS-in-JS via MUI
+Backend: Basic API route in Next.js to handle form submissions
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+Project Setup Instructions
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+Prerequisites
+Node.js and npm installed
+Installation
+Clone this repository.
+1. git clone [repository-url]. 
+2. Install dependencies.
+  yarn 
+3. Run the development server. 
+  yarn dev
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Hosting Details
+This project is deployed on Netlify
+https://splendid-marzipan-c7eaf4.netlify.app
 
-## Learn More
+Styling, SEO, and Performance Strategies
 
-To learn more about Next.js, take a look at the following resources:
+Styling
+CSS-in-JS: MUI's styled API was used for component styling, enabling dynamic theming and modular CSS.
+Responsive Layout: The mobile layout was manually optimized to maintain usability.
+Custom Form Styling: Each form field includes customized styles, including hover and focus states for enhanced user experience.
+SEO Optimization
+Meta Tags: The project includes SEO meta tags for Core Web Vitals and social media preview tags (Open Graph, Twitter cards).
+Heading Hierarchy: A logical heading structure was followed for accessibility and SEO.
+Performance Optimization
+Lazy Loading for YouTube Video: The embedded YouTube video uses lazy loading to improve Largest Contentful Paint (LCP).
+Static Generation (SSG): Implemented static generation for the main and contact pages for faster loading.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Backend Details
 
-## Deploy on Vercel
+The backend is implemented as an API route in Next.js. When the form is submitted, the API route logs the data to the console and responds with a message like: "Thank you for your interest, [Name]".
+Additional Notes
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+Assumptions Made
+Placeholder form validation was added for required fields.
+The design mockups were treated as wireframes, so exact colors and styles were adjusted for consistency and accessibility.
