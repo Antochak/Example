@@ -18,7 +18,7 @@ export const IntroductionBlock = () => {
         direction={{xs: 'column', md: 'row'}}
         justifyContent='space-between'
         bgcolor={'#e5e5e5a3'}
-        gap={{xs: 3, md: 5}}
+        gap={{xs: 2, md: 5}}
       >
         <Stack gap={{xs: 1, md: 3}} flex={1}>
           <Typography component={'h1'} fontWeight={700} variant={isMobile ? 'h5' : 'h3'}>
