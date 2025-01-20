@@ -14,7 +14,7 @@ export const ContentBlock = () => {
           Also very important title
         </Typography>
         <Box
-          gap={{xs: 2, md: 5}}
+          gap={{xs: 3, md: 5}}
           width={1}
           pr={0.5}
           display='grid'
