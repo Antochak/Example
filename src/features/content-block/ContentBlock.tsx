@@ -1,8 +1,8 @@
-import {Box, Stack, Typography} from '@mui/material';
-import {ProductCard} from '~/entities';
-import {Content_data} from '~/pages/api/data';
-import {ContactButton} from '~/shared/ui';
-import {useResponsive} from '~/utils';
+import { Box, Stack, Typography } from '@mui/material';
+import { ProductCard } from '~/entities';
+import { Content_data } from '~/pages/api/data';
+import { ContactButton } from '~/shared/ui';
+import { useResponsive } from '~/utils';
 
 export const ContentBlock = () => {
   const isMobile = useResponsive('down', 'md');
@@ -14,7 +14,7 @@ export const ContentBlock = () => {
           Also very important title
         </Typography>
         <Box
-          gap={{xs: 3, md: 5}}
+          gap={{xs: 2, md: 5}}
           width={1}
           pr={0.5}
           display='grid'
